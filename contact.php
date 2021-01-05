@@ -2,7 +2,7 @@
 // Variable setting
 $name = $_REQUEST['name'];
 $email = $_REQUEST['Email'];
-$message = $_REQUEST['Comment'];
+$message = $_REQUEST['Message'];
 
 // check input fields
 if (empty($name) || empty($email) || empty($message))
@@ -12,8 +12,9 @@ if (empty($name) || empty($email) || empty($message))
 else 
 {
  mail("cavecoder.dev@gmail.com", "Cavecoder Web Message", $message , "From: $name <$email>");
-    }
+    
    echo "<script type='text/javascript'>alert('your message sent successfully');
          window.history.log(-1);
          </script>";
+}
 ?>
